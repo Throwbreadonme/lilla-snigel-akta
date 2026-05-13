@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Play, ChevronDown } from "lucide-react";
-import logoSnail from "@/assets/logo-snail.png";
+import logoHeader from "@/assets/logo-header.png";
 import heroSnail from "@/assets/hero-snail.png";
 import featStories from "@/assets/feat-stories.png";
 import featRepetition from "@/assets/feat-repetition.png";
@@ -38,11 +38,8 @@ function Index() {
       {/* Header */}
       <header className="mx-auto max-w-7xl px-6 pt-6">
         <div className="flex items-center justify-between gap-4">
-          <a href="/" className="flex items-end gap-2">
-            <span className="font-display text-3xl font-semibold text-snail-ink leading-none" style={{ fontFamily: "Fraunces, serif" }}>
-              lilla snigel
-            </span>
-            <img src={logoSnail} alt="" width={48} height={48} className="-mb-2 h-10 w-10 object-contain" />
+          <a href="/" className="flex items-center">
+            <img src={logoHeader} alt="lilla snigel" className="h-14 w-auto object-contain md:h-16" />
           </a>
           <nav className="hidden items-center gap-1 rounded-full bg-card/60 px-2 py-1 text-sm md:flex">
             {nav.map((n, i) => (
