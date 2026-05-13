@@ -39,7 +39,7 @@ function Index() {
       <header className="mx-auto max-w-7xl px-6 pt-6">
         <div className="flex items-center justify-between gap-4">
           <a href="/" className="flex items-center shrink-0">
-            <img src={logoHeader} alt="lilla snigel" className="h-28 w-auto object-contain md:h-36" />
+            <img src={logoHeader} alt="lilla snigel" className="-mb-6 h-28 w-auto object-contain md:-mb-8 md:h-36" />
           </a>
           <nav className="hidden items-center gap-1 rounded-full bg-card/60 px-2 py-1 text-sm md:flex">
             {nav.map((n, i) => (
@@ -56,7 +56,7 @@ function Index() {
           </nav>
           <div />
         </div>
-        <p className="mt-2 pl-2 text-xs italic leading-snug text-muted-foreground">
+        <p className="-mt-3 pl-2 text-xs italic leading-snug text-muted-foreground md:-mt-4">
           "Born from Viveka, aged 2,
           <br />
           singing her first Swedish words."
