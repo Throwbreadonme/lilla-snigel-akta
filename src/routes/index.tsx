@@ -133,8 +133,14 @@ function Index() {
         </div>
       </section>
 
-      {/* Steps */}
-      <section className="mx-auto max-w-7xl px-6 pt-8">
+      {/* How it works */}
+      <section className="mx-auto max-w-7xl px-6 pt-24 md:pt-32">
+        <div className="mb-8 border-t border-border pt-12 md:mb-10 md:pt-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-snail-teal">How it works</p>
+          <h2 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight text-snail-ink md:text-4xl">
+            Four simple steps, one shared moment.
+          </h2>
+        </div>
         <div className="rounded-[2rem] border border-border bg-card p-8 shadow-[0_2px_0_oklch(0.9_0.02_80)] md:p-12">
           <div className="grid gap-10 md:grid-cols-4 md:gap-2">
             {steps.map((s, i) => (
