@@ -61,7 +61,6 @@ function Index() {
           </nav>
           <div />
         </div>
-        <p className="mt-1 pl-1 text-xs text-muted-foreground">Born from Viveka, aged 2, singing her first Swedish words.</p>
       </header>
 
       {/* Hero */}
