@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Play, ChevronDown } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import logoHeader from "@/assets/logo-header.png";
 import heroSnail from "@/assets/hero-snail.png";
 import featStories from "@/assets/feat-stories.png";
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const nav = ["Hem", "Bibliotek", "Språk", "Om oss", "Blogg"];
+const nav = ["Home", "Library", "Languages", "About", "Blog"];
 
 const features = [
   { img: featStories, title: "Stories first", body: "Language lives inside narrative, not vocabulary lists. Every word is anchored in a moment." },
@@ -51,21 +51,10 @@ function Index() {
                 }`}
               >
                 {n}
-                {n === "Bibliotek" && <ChevronDown className="h-3.5 w-3.5" />}
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-2">
-            <button className="hidden items-center gap-1 rounded-full px-3 py-2 text-sm text-snail-ink/80 hover:bg-muted lg:flex">
-              Svenska <ChevronDown className="h-3.5 w-3.5" />
-            </button>
-            <button className="hidden rounded-full border border-border bg-background px-4 py-2 text-sm font-semibold text-snail-ink hover:bg-muted md:block">
-              Logga in
-            </button>
-            <button className="rounded-full bg-snail-coral px-5 py-2 text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_oklch(0.72_0.17_22/0.6)] hover:brightness-105">
-              Kom igång
-            </button>
-          </div>
+          <div />
         </div>
         <p className="mt-1 pl-1 text-xs text-muted-foreground">Born from Viveka, aged 2, singing her first Swedish words.</p>
       </header>
