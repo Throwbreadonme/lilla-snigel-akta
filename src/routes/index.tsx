@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Heart } from "lucide-react";
 import logoHeader from "@/assets/logo-header.png";
 import heroSnail from "@/assets/hero-snail.png";
 import featStories from "@/assets/feat-stories.png";
@@ -183,6 +184,88 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="mt-10 bg-snail-ink text-snail-cream">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 md:py-20 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <a href="/" className="inline-flex items-center gap-3">
+              <img src={logoHeader} alt="lilla snigel" className="h-16 w-auto object-contain" />
+            </a>
+            <p className="mt-6 max-w-sm text-base leading-relaxed text-snail-cream/70">
+              Stories for multilingual families who want to bond over a story,
+              reading together, learning together.
+            </p>
+
+            <p className="mt-12 text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">About</p>
+            <ul className="mt-4 space-y-3 text-base">
+              <li><a href="#" className="hover:text-snail-coral">About us</a></li>
+              <li><a href="#" className="hover:text-snail-coral">Our philosophy</a></li>
+              <li><a href="#" className="hover:text-snail-coral">Blog</a></li>
+            </ul>
+
+            <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">Follow us</p>
+            <div className="mt-4 flex items-center gap-3">
+              {[
+                { icon: Facebook, label: "Facebook" },
+                { icon: Linkedin, label: "LinkedIn" },
+                { icon: Instagram, label: "Instagram" },
+              ].map(({ icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href="#"
+                  aria-label={label}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-snail-cream/30 text-snail-cream/80 transition hover:border-snail-coral hover:text-snail-coral"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Discover */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">Discover</p>
+            <ul className="mt-4 space-y-3 text-base">
+              <li><a href="#" className="hover:text-snail-coral">Browse stories</a></li>
+              <li><a href="#" className="hover:text-snail-coral">By age</a></li>
+              <li><a href="#" className="hover:text-snail-coral">By theme</a></li>
+              <li><a href="#" className="hover:text-snail-coral">By level</a></li>
+            </ul>
+          </div>
+
+          {/* Support + Language */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">Support</p>
+            <ul className="mt-4 space-y-3 text-base">
+              <li><a href="#" className="hover:text-snail-coral">FAQ</a></li>
+              <li><a href="#" className="hover:text-snail-coral">Contact</a></li>
+              <li><a href="mailto:hello@lillasnigel.com" className="hover:text-snail-coral">hello@lillasnigel.com</a></li>
+            </ul>
+
+            <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">Language</p>
+            <ul className="mt-4 space-y-3 text-base">
+              <li><a href="#" className="inline-flex items-center gap-2 hover:text-snail-coral"><span aria-hidden>🇸🇪</span> Svenska</a></li>
+              <li><a href="#" className="inline-flex items-center gap-2 hover:text-snail-coral"><span aria-hidden>🇬🇧</span> English</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-snail-cream/10">
+          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-6 py-6 text-sm text-snail-cream/60 md:flex-row md:items-center">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+              <a href="#" className="hover:text-snail-cream">Privacy policy</a>
+              <a href="#" className="hover:text-snail-cream">Cookie policy</a>
+              <a href="#" className="hover:text-snail-cream">Terms of use</a>
+              <span>© 2026 Lilla Snigel</span>
+            </div>
+            <p className="inline-flex items-center gap-2">
+              Made with <Heart className="h-4 w-4 fill-snail-coral text-snail-coral" /> in Stockholm
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
