@@ -67,7 +67,10 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 pt-10 md:pt-16">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
-            <h1 className="text-5xl font-semibold leading-[1.05] text-snail-ink md:text-6xl">
+            <h1
+              className="text-5xl font-semibold leading-[1.05] text-snail-ink md:text-6xl"
+              style={{ fontVariantLigatures: "none", fontFeatureSettings: '"swsh" 0, "salt" 0, "ss01" 0, "dlig" 0, "calt" 0' }}
+            >
               Learning is a journey
               <br />
               better done together.
