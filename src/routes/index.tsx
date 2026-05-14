@@ -170,18 +170,21 @@ function Index() {
 
       {/* Footer banner */}
       <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="relative flex items-center gap-6 overflow-hidden rounded-[2rem] bg-snail-yellow-soft/70 px-6 py-6 md:px-10">
-          <img src={footerHouse} alt="" width={96} height={96} className="h-16 w-16 shrink-0 object-contain md:h-20 md:w-20" />
-          <p className="font-display text-lg leading-snug text-snail-ink md:text-xl" style={{ fontFamily: "Fraunces, serif" }}>
+        <div className="relative overflow-hidden rounded-[2rem] bg-snail-yellow-soft/70 px-6 py-10 text-center md:px-10 md:py-14">
+          <img
+            src={footerHouse}
+            alt=""
+            width={1536}
+            height={1024}
+            className="mx-auto h-20 w-auto object-contain md:h-28"
+          />
+          <p
+            className="mt-6 font-display text-xl leading-snug text-snail-ink md:text-2xl"
+            style={{ fontFamily: "Fraunces, serif" }}
+          >
             Families who wanted to learn together,
             <br className="hidden md:block" /> and thrive in their new setting.
           </p>
-          <div className="ml-auto hidden items-center gap-3 md:flex">
-            <span className="h-3 w-3 rounded-full bg-snail-teal-soft" />
-            <span className="h-2 w-2 rounded-full bg-snail-coral-soft" />
-            <span className="h-4 w-4 rounded-full bg-snail-green-soft" />
-            <span className="h-2 w-2 rounded-full bg-snail-yellow" />
-          </div>
         </div>
       </section>
 
