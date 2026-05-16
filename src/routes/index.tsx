@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Play } from "lucide-react";
 import { Facebook, Linkedin, Instagram, Heart } from "lucide-react";
+import { useState } from "react";
 import logoHeader from "@/assets/logo-header.png";
 import heroSnail from "@/assets/hero-snail.png";
 import featStories from "@/assets/feat-stories.png";
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const nav = ["Home", "Library", "Languages", "About", "Blog"];
+const nav = ["Home", "Library", "Languages", "About"];
 
 const features = [
   { img: featStories, title: "Stories first", body: "Language lives inside narrative, not vocabulary lists. Every word is anchored in a moment." },
@@ -32,6 +33,33 @@ const steps = [
   { n: "03", color: "bg-snail-yellow-soft text-snail-yellow", img: step3, title: "Tap to continue", body: "One tap anywhere advances the story. The narrator reads aloud. The child listens and looks." },
   { n: "04", color: "bg-snail-green-soft text-snail-green", img: step4, title: "Play the game", body: "After the story, a gentle picture-matching game reviews every word learned." },
 ];
+
+function LanguageToggle() {
+  const [lang, setLang] = useState<"EN" | "SV">("EN");
+
+  return (
+    <div className="flex flex-col items-end gap-1">
+      <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] text-snail-ink/40">
+        Language
+      </span>
+      <div className="flex gap-1 rounded-full border border-border bg-white/70 p-[0.2rem]">
+        {(["EN", "SV"] as const).map((l) => (
+          <button
+            key={l}
+            onClick={() => setLang(l)}
+            className={`rounded-full px-3 py-1 text-[0.8rem] font-semibold transition-all duration-150 ${
+              lang === l
+                ? "bg-snail-coral-soft text-snail-coral opacity-100"
+                : "bg-transparent text-snail-ink/70 opacity-70 hover:opacity-100"
+            }`}
+          >
+            {l}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Index() {
   return (
@@ -55,7 +83,7 @@ function Index() {
               </a>
             ))}
           </nav>
-          <div />
+          <LanguageToggle />
         </div>
         <p className="-mt-3 pl-2 text-xs italic leading-snug text-muted-foreground md:-mt-4">
           "Born from Viveka, aged 2,
