@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet } from "@tanstack/react-router";
+import { RouterProvider, createRouter, createRootRoute, Outlet } from "@tanstack/react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Index } from "./routes/index";
-import { Library } from "./routes/library";
-import { TomtenOchSkogen } from "./routes/library/tomten-och-skogen";
+import { Route as IndexRoute } from "./routes/index";
+import { Route as LibraryRoute } from "./routes/library";
+import { Route as TomtenRoute } from "./routes/library/tomten-och-skogen";
 import "./styles.css";
 
 const queryClient = new QueryClient();
@@ -17,26 +17,11 @@ const rootRoute = createRootRoute({
   ),
 });
 
-const indexRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/",
-  component: Index,
-});
-
-const libraryRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/library",
-  component: Library,
-});
-
-const tomtenRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/library/tomten-och-skogen",
-  component: TomtenOchSkogen,
-});
+const indexRoute = IndexRoute.update({ getParentRoute: () => rootRoute } as any);
+const libraryRoute = LibraryRoute.update({ getParentRoute: () => rootRoute } as any);
+const tomtenRoute = TomtenRoute.update({ getParentRoute: () => rootRoute } as any);
 
 const routeTree = rootRoute.addChildren([indexRoute, libraryRoute, tomtenRoute]);
-
 const router = createRouter({ routeTree });
 
 declare module "@tanstack/react-router" {
