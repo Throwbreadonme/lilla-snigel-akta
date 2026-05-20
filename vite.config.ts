@@ -6,7 +6,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [
-    TanStackRouterVite({ autoCodeSplitting: true }),
+    TanStackRouterVite({ 
+      autoCodeSplitting: true,
+      routesDirectory: "./src/routes",
+      generatedRouteTree: "./src/routeTree.gen.ts",
+    }),
     react(),
     tailwindcss(),
     tsconfigPaths(),
@@ -14,5 +18,4 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-  publicDir: "public",
 });
