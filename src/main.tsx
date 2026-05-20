@@ -7,9 +7,9 @@ import "./styles.css";
 const queryClient = new QueryClient();
 
 // Import route components
-import Index from "./routes/index";
-import Library from "./routes/library";
-import TomtenOchSkogen from "./routes/library/tomten-och-skogen";
+import { Index } from "./routes/index";
+import { Library } from "./routes/library";
+import { TomtenOchSkogen } from "./routes/library/tomten-och-skogen";
 
 const rootRoute = createRootRoute({
   component: () => {
