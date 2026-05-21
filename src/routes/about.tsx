@@ -1,3 +1,4 @@
+// About page - Lilla Snigel
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Heart } from "lucide-react";
 import logoHeader from "@/assets/logo-header.png";
