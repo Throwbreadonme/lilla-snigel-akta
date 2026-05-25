@@ -50,10 +50,21 @@ export function About() {
           </div>
 
           <div className="md:col-span-2 space-y-6 text-base leading-relaxed text-snail-ink/80">
-            <p>It started with Viveka. My daughter was two years old when she first attempted to sing <em>lilla snigel akta dig</em>, a Swedish nursery rhyme — her first real Swedish words. In that moment I understood something I had known professionally for years but had never felt quite so personally: language enters children through joy, through repetition, and through the people they love.</p>
-            <p>I studied literature and linguistics in Salamanca and Edinburgh. One of my first jobs was teaching English to very young children — children who had barely learned to speak. What I discovered early was simple: they learned because we had fun and because we repeated things together. Not because of tests, not because of pressure.</p>
-            <p>I spent years teaching Spanish through stories, one to one, in adult education, with professionals in London. Then I spent nine years as a Learning Designer and Product Manager at one of the world's largest language learning platforms, shaping how products can genuinely serve the people who use them.</p>
-            <p>I am an immigrant. I know what it feels like to arrive somewhere new and feel the distance between you and the world around you. I built Lilla Snigel for the families I kept meeting in Stockholm — families who wanted to give their children the gift of Swedish, without losing the language they carried from home. Families who wanted to learn together, and thrive in their new setting.</p>
+<p>
+  It started with Viveka. My daughter was two years old when she first attempted to sing <em>lilla snigel akta dig</em>, a Swedish nursery rhyme and her first real Swedish words. In that moment I understood something I had known professionally for years but had never felt quite so personally: language enters children through joy, through repetition, and through the people they love.
+</p>
+<p>
+  I studied literature and linguistics in Salamanca and Edinburgh. One of my first jobs was teaching English to very young children, children who had barely learned to speak. What I discovered early was simple: they learned because we had fun and because we repeated things together. Not because of strict curricula, pedagogically sound textbooks, or tests. And absolutely not because of pressure.
+</p>
+<p>
+  I am a hardcore linguist. I genuinely care about these things. But all these years of experience have taught me one thing: in learning, you have to be flexible and have fun.
+</p>
+<p>
+  I spent years teaching Spanish through stories, one to one, in adult education, with professionals in London. Then I spent nine years as a Learning Designer and Product Manager at one of the world's largest language learning platforms, shaping how products can genuinely serve the people who use them.
+</p>
+<p>
+  Lastly, I am an immigrant. I know what it feels like to arrive somewhere new and feel the distance between you and the world around you. I built Lilla Snigel for the families I kept meeting in Stockholm, families who wanted to give their children the gift of Swedish, without losing the language they carried from home, or their identity. Families who wanted to learn together, and thrive in their new setting.
+</p>
             <div className="rounded-[1.5rem] bg-snail-yellow-soft/60 border border-snail-yellow-soft p-6">
               <p className="font-semibold text-snail-ink leading-relaxed" style={{ fontFamily: "Fraunces, serif" }}>"Language enters children through joy, through repetition, and through the people they love."</p>
             </div>
