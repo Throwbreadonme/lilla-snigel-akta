@@ -39,8 +39,8 @@ export function About() {
             <div className="rounded-[1.5rem] border border-border bg-card overflow-hidden md:sticky md:top-8">
               <img src="https://drive.google.com/thumbnail?id=1B66wTmiQQffpJOkRYpWYk_qYQBtzcwZK&sz=w600" alt="Elena Martin Hernández" className="w-full h-72 object-cover object-top" />
               <div className="p-5">
-                <h2 className="font-semibold text-snail-ink text-lg" style={{ fontFamily: "Fraunces, serif" }}>Elena Martin Hernández</h2>
-                <p className="text-sm text-snail-ink/60 mt-1 leading-relaxed">Linguist, storyteller, learning designer</p>
+                <h2 className="font-semibold text-snail-ink text-lg" style={{ fontFamily: "Fraunces, serif" }}>Elena Martín Hernández</h2>
+                <p className="text-sm text-snail-ink/60 mt-1 leading-relaxed">Linguist, storyteller, learning designer.</p>
                 <div className="mt-4 flex items-center gap-2 text-xs text-snail-ink/40">
                   <Heart className="h-3 w-3 fill-snail-coral text-snail-coral" />
                   <span>Made with love in Stockholm</span>
@@ -54,10 +54,7 @@ export function About() {
   It started with Viveka. My daughter was two years old when she first attempted to sing <em>lilla snigel akta dig</em>, a Swedish nursery rhyme and her first real Swedish words. In that moment I understood something I had known professionally for years but had never felt quite so personally: language enters children through joy, through repetition, and through the people they love.
 </p>
 <p>
-  I studied literature and linguistics in Salamanca and Edinburgh. One of my first jobs was teaching English to very young children, children who had barely learned to speak. What I discovered early was simple: they learned because we had fun and because we repeated things together. Not because of strict curricula, pedagogically sound textbooks, or tests. And absolutely not because of pressure.
-</p>
-<p>
-  I am a hardcore linguist. I genuinely care about these things. But all these years of experience have taught me one thing: in learning, you have to be flexible and have fun.
+  I studied literature and linguistics in Salamanca and Edinburgh. One of my first jobs was teaching English to very young children, children who had barely learned to speak. What I discovered early was simple: they learned because we had fun and because we repeated things together. The curriculum was there, the structure was there, but what made it work was joy.
 </p>
 <p>
   I spent years teaching Spanish through stories, one to one, in adult education, with professionals in London. Then I spent nine years as a Learning Designer and Product Manager at one of the world's largest language learning platforms, shaping how products can genuinely serve the people who use them.
