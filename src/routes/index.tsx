@@ -22,7 +22,7 @@ const nav = [
   { label: "Home", to: "/" },
   { label: "Library", to: "/library" },
   { label: "Languages", to: "/" },
-  { label: "About", to: "/" },
+  { label: "About", to: "/about" },
 ];
 
 const features = [
@@ -50,7 +50,7 @@ function LanguageToggle() {
             key={l}
             onClick={() => setLang(l)}
             className={`rounded-full px-3 py-1 text-[0.8rem] font-semibold transition-all duration-150 ${
-              lang === l ? "bg-snail-coral-soft text-snail-coral" : "bg-transparent text-snail-ink/70 hover:opacity-100 opacity-70"
+              lang === l ? "bg-snail-coral-soft text-snail-coral" : "bg-transparent text-snail-ink/70 opacity-70 hover:opacity-100"
             }`}
           >
             {l}
@@ -104,10 +104,7 @@ function Index() {
               No app can replace that moment. We just make it a little richer.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                to="/library"
-                className="inline-flex items-center gap-2 rounded-full bg-snail-coral px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_oklch(0.72_0.17_22/0.7)] transition hover:brightness-105"
-              >
+              <Link to="/library" className="inline-flex items-center gap-2 rounded-full bg-snail-coral px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_oklch(0.72_0.17_22/0.7)] transition hover:brightness-105">
                 Choose a story
                 <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/20">
                   <ArrowRight className="h-4 w-4" />
@@ -185,35 +182,17 @@ function Index() {
         </div>
         <div className="rounded-[2rem] border border-border bg-card p-8 shadow-[0_2px_0_oklch(0.9_0.02_80)] md:p-12">
           <div className="grid gap-6 md:grid-cols-3">
-            {/* Featured story */}
             <div className="rounded-[1.5rem] border border-border bg-background overflow-hidden">
-              <div className="flex items-end gap-2 bg-snail-yellow-soft/50 px-6 pt-6 h-36">
-                <div className="rounded-t-md bg-snail-teal w-12 h-24 flex items-center justify-center">
-                  <span className="text-[7px] text-white font-semibold text-center leading-tight px-1">Äventyret i skogen</span>
-                </div>
-                <div className="rounded-t-md bg-snail-coral w-10 h-20 flex items-center justify-center">
-                  <span className="text-[7px] text-white font-semibold text-center leading-tight px-1">Mina känslor</span>
-                </div>
-                <div className="rounded-t-md bg-snail-green w-11 h-[5.5rem] flex items-center justify-center">
-                  <span className="text-[7px] text-white font-semibold text-center leading-tight px-1">Bondgårdens vänner</span>
-                </div>
-              </div>
+              <img src="https://drive.google.com/thumbnail?id=18VZk54Q1beFbmoC2sQFl-lQOtNrvJ70g&sz=w600" alt="Tomten och skogen" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="rounded-full bg-snail-coral-soft px-3 py-1 text-xs font-semibold text-snail-coral">Folk</span>
                   <span className="rounded-full bg-snail-teal-soft px-3 py-1 text-xs font-semibold text-snail-teal">Ages 2–4</span>
                   <span className="rounded-full bg-snail-green-soft px-3 py-1 text-xs font-semibold text-snail-green">Available now</span>
                 </div>
-                <h3 className="text-2xl font-semibold leading-tight text-snail-ink mb-3" style={{ fontFamily: "Fraunces, serif" }}>
-                  Tomten och skogen
-                </h3>
-                <p className="text-sm leading-relaxed text-snail-ink/70 mb-5">
-                  Follow the tomte and his little companion on a winter walk through the forest. Six first Swedish words for a gentle start.
-                </p>
-                <Link
-                  to="/library/tomten-och-skogen"
-                  className="inline-flex items-center gap-2 rounded-full bg-snail-coral px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:brightness-105"
-                >
+                <h3 className="text-2xl font-semibold leading-tight text-snail-ink mb-3" style={{ fontFamily: "Fraunces, serif" }}>Tomten och skogen</h3>
+                <p className="text-sm leading-relaxed text-snail-ink/70 mb-5">Follow the tomte and his little companion on a winter walk through the forest. Six first Swedish words for a gentle start.</p>
+                <Link to="/library/tomten-och-skogen" className="inline-flex items-center gap-2 rounded-full bg-snail-coral px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:brightness-105">
                   Start reading
                   <span className="grid h-6 w-6 place-items-center rounded-full bg-primary-foreground/20">
                     <Play className="h-3 w-3 fill-white text-white" />
@@ -221,17 +200,10 @@ function Index() {
                 </Link>
               </div>
             </div>
-
-            {/* Coming soon */}
-            {[
-              { title: "Alfons i trädgården", tags: ["Nature", "Ages 3–5"] },
-              { title: "Prinsessan och havet", tags: ["Folk", "Ages 4–6"] },
-            ].map((card) => (
+            {[{ title: "Alfons i trädgården", tags: ["Nature", "Ages 3–5"] }, { title: "Prinsessan och havet", tags: ["Folk", "Ages 4–6"] }].map((card) => (
               <div key={card.title} className="rounded-[1.5rem] border border-border bg-background p-6 opacity-50">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {card.tags.map((t) => (
-                    <span key={t} className="rounded-full bg-muted px-3 py-1 text-xs font-semibold text-snail-ink/60">{t}</span>
-                  ))}
+                  {card.tags.map((t) => (<span key={t} className="rounded-full bg-muted px-3 py-1 text-xs font-semibold text-snail-ink/60">{t}</span>))}
                   <span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold text-snail-ink/40">Coming soon</span>
                 </div>
                 <h3 className="text-xl font-semibold text-snail-ink/60" style={{ fontFamily: "Fraunces, serif" }}>{card.title}</h3>
@@ -248,10 +220,7 @@ function Index() {
           <p className="mt-6 text-xl leading-snug text-snail-ink md:text-2xl" style={{ fontFamily: "Fraunces, serif" }}>
             Families who want to learn together<br className="hidden md:block" /> and thrive in their new setting.
           </p>
-          <Link
-            to="/library"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-snail-coral px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_oklch(0.72_0.17_22/0.7)] transition hover:brightness-105"
-          >
+          <Link to="/library" className="mt-8 inline-flex items-center gap-2 rounded-full bg-snail-coral px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_oklch(0.72_0.17_22/0.7)] transition hover:brightness-105">
             Choose your first story
             <span className="grid h-7 w-7 place-items-center rounded-full bg-primary-foreground/20">
               <ArrowRight className="h-4 w-4" />
@@ -267,12 +236,10 @@ function Index() {
             <Link to="/" className="inline-flex items-center gap-3">
               <img src={logoHeader} alt="lilla snigel" className="h-16 w-auto object-contain" />
             </Link>
-            <p className="mt-6 max-w-sm text-base leading-relaxed text-snail-cream/70">
-              Stories for multilingual families who want to bond over a story, reading together, learning together.
-            </p>
+            <p className="mt-6 max-w-sm text-base leading-relaxed text-snail-cream/70">Stories for multilingual families who want to bond over a story, reading together, learning together.</p>
             <p className="mt-12 text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">About</p>
             <ul className="mt-4 space-y-3 text-base">
-              <li><a href="#" className="hover:text-snail-coral">About us</a></li>
+              <li><Link to="/about" className="hover:text-snail-coral">About us</Link></li>
               <li><a href="#" className="hover:text-snail-coral">Our philosophy</a></li>
             </ul>
             <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-snail-cream/50">Follow us</p>
@@ -315,9 +282,7 @@ function Index() {
               <a href="#" className="hover:text-snail-cream">Terms of use</a>
               <span>© 2026 Lilla Snigel</span>
             </div>
-            <p className="inline-flex items-center gap-2">
-              Made with <Heart className="h-4 w-4 fill-snail-coral text-snail-coral" /> in Stockholm
-            </p>
+            <p className="inline-flex items-center gap-2">Made with <Heart className="h-4 w-4 fill-snail-coral text-snail-coral" /> in Stockholm</p>
           </div>
         </div>
       </footer>
