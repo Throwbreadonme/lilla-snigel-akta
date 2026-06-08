@@ -12,3 +12,5 @@ const AboutRoute = AboutRouteImport.update({ id: '/about', path: '/about', getPa
 const rootRouteChildren = { IndexRoute, LibraryRoute, TomtenRoute, AboutRoute }
 
 export const routeTree = rootRouteImport._addFileChildren(rootRouteChildren)
+import { Route as FAQRouteImport } from './routes/faq'
+const FAQRoute = FAQRouteImport.update({ id: '/faq', path: '/faq', getParentRoute: () => rootRouteImport } as any)
